@@ -29,19 +29,19 @@ You can use any operators from the list
 `!` `&&` `||` `===` `==` `!==` `!=` `>` `>=` `<` `<=` `(` `)`  
 It works the same as `if` operator from JavaScript.
 ```typescript
-conditionHandler(1) // 1 === 1
+conditionHandler([1]) // 1 === 1
 
-conditionHandler(1, '&&', 2) // 1 && 2 === 2
+conditionHandler([1, '&&', 2]) // 1 && 2 === 2
 
-conditionHandler(1, '&&', 0) // 1 && 0 === 0
+conditionHandler([1, '&&', 0]) // 1 && 0 === 0
 
-conditionHandler(1, '||', 0) // 1 || 0 === 1
+conditionHandler([1, '||', 0]) // 1 || 0 === 1
 
-conditionHandler('!', 1, '||', 0) // !1 || 0 === 0
+conditionHandler(['!', 1, '||', 0]) // !1 || 0 === 0
 
-conditionHandler(1, '>', 2) // 1 > 2 === false
+conditionHandler([1, '>', 2]) // 1 > 2 === false
 
-conditionHandler(2, '>=', 1) // 2 >= 1 === true
+conditionHandler([2, '>=', 1]) // 2 >= 1 === true
 ```
 
 You can use a plugin to handle non-operator argument.
